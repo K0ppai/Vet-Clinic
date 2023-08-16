@@ -191,7 +191,7 @@ I would like to thank Microverse for this opportunity that allowed me to work on
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/K0ppai/Vet-Clinic/blob/feature/create_animals_table/MIT.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
