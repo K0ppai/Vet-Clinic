@@ -9,3 +9,7 @@ CREATE TABLE animals(
     neutered BOOLEAN NOT NULL,
     weight_kg NUMERIC(5,2) NOT NULL
 );
+
+-- QUWERY AND UPDATE ANIMALS TABLE
+ALTER TABLE animals
+ADD COLUMN species TEXT;
