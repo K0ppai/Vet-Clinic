@@ -16,3 +16,10 @@ CREATE TABLE treatments(
 	type VARCHAR(250),
 	name VARCHAR(250)
 );
+
+CREATE TABLE medical_histories_and_treatments(
+	treatment_id INT REFERENCES treatments(id),
+	medical_histories_id INT REFERENCES medical_histories(id)
+);
+
+
