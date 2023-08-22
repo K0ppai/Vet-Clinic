@@ -221,3 +221,7 @@ DROP INDEX animal_id_asc;
 EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
 CREATE INDEX vet_id_asc ON visits(vet_id ASC);
 DROP INDEX vet_id_asc;
+
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+CREATE INDEX owner_email_asc ON owners(email ASC);
+DROP INDEX owner_email_asc;
