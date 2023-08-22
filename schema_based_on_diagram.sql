@@ -38,3 +38,9 @@ CREATE TABLE invoices(
 	medical_history_id INT REFERENCES medical_histories(id)
 );
 
+ALTER TABLE invoice_items ADD column invoice_id INT REFERENCES invoices(id);
+
+CREATE INDEX patient_id_asc ON patients(id);
+CREATE INDEX treatment_id_asc ON treatments(id);
+CREATE INDEX medical_histories_id_asc ON medical_histories(id);
+CREATE INDEX invoice_id_asc ON invoices(id);
