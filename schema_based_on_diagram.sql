@@ -19,7 +19,8 @@ CREATE TABLE treatments(
 
 CREATE TABLE medical_histories_and_treatments(
 	treatment_id INT REFERENCES treatments(id),
-	medical_histories_id INT REFERENCES medical_histories(id)
+	medical_histories_id INT REFERENCES medical_histories(id),
+	PRIMARY KEY (treatment_id, medical_histories_id)
 );
 
 CREATE TABLE invoice_items(
