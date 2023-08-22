@@ -211,3 +211,11 @@ SELECT a.name Animal_name,a.date_of_birth Animal_DOB,a.escape_attempts Animal_Es
 SELECT v.name,count(vt.vet_id) FROM visits vt JOIN vets v ON v.id = vt.vet_id WHERE vt.vet_id = (SELECT id FROM vets v left JOIN specializations sp ON v.id = sp.vet_id WHERE vet_id is null) GROUP BY v.name;
 -- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 SELECT v.name vet_name,count(*) visit_count,s.name should_specialize_in FROM visits vt JOIN vets v ON v.id = vt.vet_id JOIN animals a ON a.id = vt.animal_id JOIN species s ON a.species_id = s.id WHERE v.name = 'Maisy Smith' GROUP BY v.name,s.name ORDER BY visit_count DESC;
+
+-------------------------
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
