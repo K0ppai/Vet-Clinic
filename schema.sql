@@ -46,3 +46,9 @@ CREATE TABLE visits (animal_id INT REFERENCES animals(id) ,vet_id INT REFERENCES
 
 -----------------------------------------------------
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+DROP INDEX animal_id_asc;
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+DROP INDEX vet_id_asc;
+CREATE INDEX owner_email_asc ON owners(email ASC);
+DROP INDEX owner_email_asc;

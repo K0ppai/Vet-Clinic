@@ -215,13 +215,7 @@ SELECT v.name vet_name,count(*) visit_count,s.name should_specialize_in FROM vis
 -------------------------
 
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
-CREATE INDEX animal_id_asc ON visits(animal_id ASC);
-DROP INDEX animal_id_asc;
 
 EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
-CREATE INDEX vet_id_asc ON visits(vet_id ASC);
-DROP INDEX vet_id_asc;
 
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
-CREATE INDEX owner_email_asc ON owners(email ASC);
-DROP INDEX owner_email_asc;
